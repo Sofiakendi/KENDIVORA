@@ -1,0 +1,1217 @@
+/* ==============================
+   KENDIVORA WEBSITE
+   Colours: Black, White & Gold
+================================= */
+
+/* 1. GENERAL SETTINGS */
+
+:root {
+    --black: #0B0B0B;
+    --white: #FFFFFF;
+    --gold: #D6B779;
+    --dark-grey: #171717;
+    --light-grey: #CCCCCC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* 2. NAVIGATION BAR */
+
+header {
+    background-color: var(--black);
+    padding: 20px 8%;
+    border-bottom: 1px solid #292929;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* 3. HERO SECTION */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    display: block;
+}
+
+.hero p {
+    color: var(--light-grey);
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+
+/* 4. BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--black);
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+/* 5. SERVICES SECTION */
+
+.services {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.services h2 span {
+    color: var(--gold);
+}
+
+.services-intro {
+    color: var(--light-grey);
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--dark-grey);
+    padding: 30px 20px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--light-grey);
+}
+
+
+/* 6. CALL TO ACTION SECTION */
+
+.cta {
+    background-color: var(--dark-grey);
+    text-align: center;
+    padding: 70px 8%;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta h2 span {
+    color: var(--gold);
+}
+
+.cta p {
+    color: var(--light-grey);
+    margin-bottom: 25px;
+}
+
+
+/* 7. FOOTER */
+
+footer {
+    background-color: var(--black);
+    border-top: 1px solid #292929;
+    text-align: center;
+    padding: 25px 8%;
+    color: var(--light-grey);
+}
+
+footer span {
+    color: var(--gold);
+}
+
+
+/* 8. MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 200px;
+        background-color: var(--dark-grey);
+        padding: 20px;
+        gap: 20px;
+        border: 1px solid var(--gold);
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 50px 5%;
+    }
+
+    .services h2 {
+        font-size: 28px;
+    }
+
+    .cta {
+        padding: 50px 5%;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+}
+
+/* =================================
+   KENDIVORA ABOUT PAGE
+================================= */
+
+
+/* ABOUT HERO */
+
+.about-hero {
+    padding: 120px 8%;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            #252017 0%,
+            #0B0B0B 65%
+        );
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.about-hero h1 {
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.about-hero h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: auto;
+    color: var(--light-grey);
+    font-size: 18px;
+}
+
+
+/* BRAND PHILOSOPHY */
+
+.brand-philosophy {
+    padding: 90px 12%;
+    text-align: center;
+}
+
+.brand-philosophy h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    max-width: 800px;
+    margin: 0 auto 25px;
+}
+
+.brand-philosophy h2 span {
+    color: var(--gold);
+}
+
+.brand-philosophy p:not(.section-label) {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    color: var(--light-grey);
+    font-size: 17px;
+}
+
+
+/* THREE PILLARS */
+
+.pillars {
+    background-color: var(--dark-grey);
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.pillars h2 {
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+
+.pillars h2 span {
+    color: var(--gold);
+}
+
+.pillar-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.pillar-card {
+    background-color: var(--black);
+    padding: 35px 25px;
+    border: 1px solid #353535;
+    border-radius: 8px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.pillar-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+}
+
+.pillar-number {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.pillar-card h3 {
+    color: var(--gold);
+    font-size: 27px;
+    margin: 18px 0;
+}
+
+.pillar-card p {
+    color: var(--light-grey);
+    line-height: 1.8;
+}
+
+
+/* MISSION AND VISION */
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    padding: 90px 8%;
+}
+
+.mission-box,
+.vision-box {
+    padding: 35px;
+    border-left: 2px solid var(--gold);
+    background-color: var(--dark-grey);
+}
+
+.mission-vision h2 {
+    font-size: 29px;
+    margin-bottom: 18px;
+}
+
+.mission-vision h2 span {
+    color: var(--gold);
+}
+
+.mission-vision p:not(.section-label) {
+    color: var(--light-grey);
+    line-height: 1.8;
+}
+
+
+/* AREAS OF INTEREST */
+
+.explore {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: var(--dark-grey);
+}
+
+.explore h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.explore h2 span {
+    color: var(--gold);
+}
+
+.explore-intro {
+    color: var(--light-grey);
+    margin-bottom: 40px;
+}
+
+.explore-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.explore-card {
+    padding: 28px 20px;
+    background-color: var(--black);
+    border: 1px solid #353535;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.explore-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.explore-card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.explore-card p {
+    color: var(--light-grey);
+    font-size: 14px;
+}
+
+
+/* CLOSING STATEMENT */
+
+.about-closing {
+    padding: 100px 8%;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle at center,
+            #252017 0%,
+            #0B0B0B 70%
+        );
+}
+
+.about-closing h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 20px;
+}
+
+.about-closing h2 span {
+    color: var(--gold);
+    display: block;
+}
+
+.about-closing p:not(.section-label) {
+    color: var(--light-grey);
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding: 85px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .brand-philosophy {
+        padding: 65px 7%;
+    }
+
+    .brand-philosophy h2 {
+        font-size: 29px;
+    }
+
+    .brand-philosophy p:not(.section-label) {
+        font-size: 15px;
+    }
+
+    .pillars {
+        padding: 65px 6%;
+    }
+
+    .pillars h2 {
+        font-size: 28px;
+    }
+
+    .pillar-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+    }
+
+    .explore {
+        padding: 65px 6%;
+    }
+
+    .explore h2 {
+        font-size: 29px;
+    }
+
+    .about-closing {
+        padding: 75px 6%;
+    }
+}
+
+
+/* =================================
+   KENDIVORA CONTACT PAGE
+================================= */
+
+
+/* CONTACT HERO */
+
+.contact-hero {
+    text-align: center;
+    padding: 100px 8%;
+    background:
+        radial-gradient(
+            circle at center,
+            #252017 0%,
+            #0B0B0B 70%
+        );
+}
+
+.contact-hero h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    margin-bottom: 20px;
+}
+
+.contact-hero h1 span {
+    color: var(--gold);
+}
+
+.contact-hero > p:last-child {
+    max-width: 700px;
+    margin: auto;
+    color: var(--light-grey);
+    font-size: 17px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 55px;
+    padding: 90px 8%;
+    align-items: start;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    color: var(--light-grey);
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+
+/* CONTACT DETAILS */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.contact-item h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.contact-item p,
+.contact-item a {
+    display: block;
+    color: var(--light-grey);
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+    color: var(--gold);
+}
+
+
+/* CONTACT FORM */
+
+.contact-form-container {
+    background-color: var(--dark-grey);
+    border: 1px solid #333333;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--white);
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid #444444;
+    border-radius: 5px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form-container .btn {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-note {
+    color: var(--light-grey);
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+
+/* CONTACT CLOSING */
+
+.contact-closing {
+    text-align: center;
+    padding: 85px 8%;
+    background-color: var(--dark-grey);
+}
+
+.contact-closing h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.contact-closing h2 span {
+    color: var(--gold);
+    display: block;
+}
+
+.contact-closing > p:last-child {
+    color: var(--light-grey);
+}
+
+
+/* CONTACT MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .contact-hero {
+        padding: 75px 6%;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-hero > p:last-child {
+        font-size: 15px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 6%;
+    }
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 27px;
+    }
+
+    .contact-form-container {
+        padding: 25px 18px;
+    }
+
+    .contact-closing {
+        padding: 65px 6%;
+    }
+}
+
+/* =================================
+   PROJECTS PAGE
+================================= */
+
+.projects-hero {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 8%;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+        #171717;
+}
+
+.projects-hero-content {
+    max-width: 800px;
+}
+
+.projects-hero-content > span {
+    color: #D6B779;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.projects-hero h1 {
+    color: #FFFFFF;
+    font-size: clamp(38px, 6vw, 65px);
+    margin: 20px 0;
+}
+
+.projects-hero h1 span {
+    color: #D6B779;
+}
+
+.projects-hero p {
+    color: #CCCCCC;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.section-heading span {
+    color: #D6B779;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.section-heading h2 {
+    color: #FFFFFF;
+    font-size: clamp(27px, 4vw, 38px);
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #CCCCCC;
+    line-height: 1.8;
+}
+
+
+/* GRAPHIC DESIGN PORTFOLIO */
+
+.graphic-portfolio {
+    padding: 90px 8%;
+    background: #0B0B0B;
+}
+
+.graphic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.graphic-card {
+    background: #171717;
+    border: 1px solid rgba(214,183,121,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.graphic-card:hover {
+    transform: translateY(-7px);
+    border-color: #D6B779;
+}
+
+.graphic-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #222222;
+}
+
+.graphic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.graphic-card:hover .graphic-image img {
+    transform: scale(1.05);
+}
+
+.graphic-info {
+    padding: 22px;
+}
+
+.graphic-info span {
+    color: #D6B779;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.graphic-info h3 {
+    color: #FFFFFF;
+    margin: 12px 0;
+    font-size: 19px;
+}
+
+.graphic-info p {
+    color: #CCCCCC;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* PROMOTIONAL VIDEO */
+
+.video-portfolio {
+    padding: 90px 8%;
+    background: #171717;
+}
+
+.video-card {
+    max-width: 750px;
+    margin: auto;
+    background: #0B0B0B;
+    border: 1px solid rgba(214,183,121,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-card video {
+    width: 100%;
+    display: block;
+    max-height: 450px;
+    background: #000000;
+}
+
+.video-info {
+    padding: 25px;
+}
+
+.video-info h3 {
+    color: #D6B779;
+    margin-bottom: 12px;
+}
+
+.video-info p {
+    color: #CCCCCC;
+    line-height: 1.7;
+}
+
+
+/* SOCIAL MEDIA MANAGEMENT */
+
+.social-management {
+    padding: 90px 8%;
+    background: #0B0B0B;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.social-card {
+    padding: 35px 25px;
+    background: #171717;
+    border: 1px solid rgba(214,183,121,0.2);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-7px);
+    border-color: #D6B779;
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D6B779;
+    border-radius: 50%;
+    color: #D6B779;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.social-card h3 {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.social-card p {
+    color: #CCCCCC;
+    line-height: 1.7;
+    font-size: 14px;
+    min-height: 75px;
+}
+
+.social-card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #D6B779;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-card a:hover {
+    color: #FFFFFF;
+}
+
+
+/* PROJECT PHILOSOPHY */
+
+.project-philosophy {
+    padding: 100px 10%;
+    text-align: center;
+    background: #171717;
+}
+
+.project-philosophy span {
+    color: #D6B779;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.project-philosophy h2 {
+    color: #FFFFFF;
+    font-size: clamp(28px, 4vw, 42px);
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+.project-philosophy p {
+    color: #CCCCCC;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+}
+
+
+/* PROJECTS CALL TO ACTION */
+
+.projects-cta {
+    padding: 85px 8%;
+    text-align: center;
+    background: #0B0B0B;
+}
+
+.projects-cta h2 {
+    color: #FFFFFF;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.projects-cta p {
+    color: #CCCCCC;
+    margin-bottom: 30px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .graphic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .projects-hero {
+        min-height: 55vh;
+        padding: 80px 6%;
+    }
+
+    .graphic-portfolio,
+    .video-portfolio,
+    .social-management {
+        padding: 65px 6%;
+    }
+
+    .graphic-grid,
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graphic-image {
+        height: 260px;
+    }
+
+    .project-philosophy {
+        padding: 75px 7%;
+    }
+
+    .projects-cta {
+        padding: 70px 6%;
+    }
+
+}
+
+.graphic-image {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.graphic-image:hover {
+    transform: scale(1.03);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+#lightbox-image {
+    max-width: 85%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox button {
+    position: absolute;
+    background: transparent;
+    color: #D6B779;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 30px;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    .graphic-image {
+        height: 230px;
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    #lightbox-image {
+        max-width: 90%;
+        max-height: 75vh;
+    }
+
+    .lightbox button {
+        font-size: 27px;
+    }
+}
