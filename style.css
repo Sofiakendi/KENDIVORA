@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 /* ==============================
    KENDIVORA WEBSITE
    Colours: Black, White & Gold
@@ -24,10 +25,11 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manrope', sans-serif;
     background-color: var(--black);
     color: var(--white);
     line-height: 1.6;
+
 }
 
 a {
@@ -169,12 +171,13 @@ nav {
     padding: 30px 20px;
     border: 1px solid #333333;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .service-card:hover {
     border-color: var(--gold);
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(214, 183, 121, 0.15);
 }
 
 .service-card h3 {
@@ -221,6 +224,14 @@ footer {
 }
 
 footer span {
+    color: var(--gold);
+}
+footer p {
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
     color: var(--gold);
 }
 
@@ -472,18 +483,21 @@ footer span {
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 20px;
 }
-
 .explore-card {
     padding: 28px 20px;
     background-color: var(--black);
     border: 1px solid #353535;
     border-radius: 8px;
-    transition: 0.3s;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .explore-card:hover {
     border-color: var(--gold);
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(214, 183, 121, 0.12);
 }
 
 .explore-card h3 {
@@ -584,6 +598,34 @@ footer span {
         padding: 75px 6%;
     }
 }
+/* EXPLORE CARDS */
+    .explore-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* MISSION AND VISION */
+    .mission-box,
+    .vision-box {
+        padding: 25px 20px;
+    }
+
+    .mission-vision h2 {
+        font-size: 25px;
+    }
+
+    /* PILLAR CARDS */
+    .pillar-card {
+        padding: 25px 20px;
+    }
+
+    /* ABOUT CLOSING */
+    .about-closing h2 {
+        font-size: 28px;
+    }
+
+    .about-closing p {
+        font-size: 15px;
+    }
 
 
 /* =================================
@@ -619,6 +661,30 @@ footer span {
     color: var(--light-grey);
     font-size: 17px;
 }
+/* CONTACT HERO ENTRANCE ANIMATION */
+
+.contact-hero .section-label {
+    animation: contactFadeUp 0.8s ease both;
+}
+
+.contact-hero h1 {
+    animation: contactFadeUp 1s ease 0.2s both;
+}
+
+.contact-hero > p:last-child {
+    animation: contactFadeUp 1s ease 0.4s both;
+}
+
+@keyframes contactFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 /* CONTACT SECTION */
@@ -645,12 +711,16 @@ footer span {
 
 
 /* CONTACT DETAILS */
-
 .contact-item {
     display: flex;
     align-items: flex-start;
     gap: 18px;
     margin-bottom: 30px;
+    transition: transform 0.4s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(6px);
 }
 
 .contact-icon {
@@ -664,6 +734,16 @@ footer span {
     border: 1px solid var(--gold);
     border-radius: 50%;
     font-size: 20px;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background-color: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 18px rgba(214, 183, 121, 0.2);
 }
 
 .contact-item h3 {
@@ -713,18 +793,14 @@ footer span {
     border: 1px solid #444444;
     border-radius: 5px;
     outline: none;
-    font-family: Arial, sans-serif;
+   font-family: 'Manrope', sans-serif;
     font-size: 15px;
 }
-
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--gold);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #888888;
+    box-shadow: 0 0 12px rgba(214, 183, 121, 0.12);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group textarea {
@@ -735,6 +811,10 @@ footer span {
     border: none;
     cursor: pointer;
     font-size: 15px;
+}
+.contact-form-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(214, 183, 121, 0.2);
 }
 
 .form-note {
@@ -793,10 +873,20 @@ footer span {
     .contact-form-container h2 {
         font-size: 27px;
     }
+.contact-form-container {
+    background-color: var(--dark-grey);
+    border: 1px solid rgba(214, 183, 121, 0.2);
+    padding: 35px;
+    border-radius: 10px;
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
 
-    .contact-form-container {
-        padding: 25px 18px;
-    }
+.contact-form-container:hover {
+    border-color: rgba(214, 183, 121, 0.55);
+    box-shadow: 0 12px 30px rgba(214, 183, 121, 0.08);
+}
 
     .contact-closing {
         padding: 65px 6%;
@@ -859,11 +949,29 @@ footer span {
     letter-spacing: 3px;
     font-size: 12px;
 }
-
 .section-heading h2 {
     color: #FFFFFF;
     font-size: clamp(27px, 4vw, 38px);
     margin: 15px 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.section-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #D6B779;
+    transform: translateX(-50%);
+    transition: width 1s ease;
+}
+
+.graphic-portfolio.reveal.visible .section-heading h2::after {
+    width: 75%;
 }
 
 .section-heading p {
@@ -884,18 +992,23 @@ footer span {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
+/* KENDIVORA — GRAPHIC PORTFOLIO CARDS */
 
 .graphic-card {
     background: #171717;
     border: 1px solid rgba(214,183,121,0.2);
     border-radius: 10px;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .graphic-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-9px);
     border-color: #D6B779;
+    box-shadow: 0 14px 30px rgba(214,183,121,0.14);
 }
 
 .graphic-image {
@@ -910,33 +1023,45 @@ footer span {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: 0.4s ease;
+    transition: transform 0.6s ease;
 }
 
 .graphic-card:hover .graphic-image img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
+/* KENDIVORA — GRAPHIC PROJECT INFORMATION */
 
 .graphic-info {
-    padding: 22px;
+    padding: 24px;
 }
 
 .graphic-info span {
+    display: inline-block;
     color: #D6B779;
     font-size: 11px;
     letter-spacing: 1.5px;
+    transition: letter-spacing 0.4s ease;
+}
+
+.graphic-card:hover .graphic-info span {
+    letter-spacing: 2px;
 }
 
 .graphic-info h3 {
     color: #FFFFFF;
-    margin: 12px 0;
+    margin: 13px 0;
     font-size: 19px;
+    transition: color 0.3s ease;
+}
+
+.graphic-card:hover .graphic-info h3 {
+    color: #D6B779;
 }
 
 .graphic-info p {
     color: #CCCCCC;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
@@ -954,6 +1079,16 @@ footer span {
     border: 1px solid rgba(214,183,121,0.2);
     border-radius: 12px;
     overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-7px);
+    border-color: #D6B779;
+    box-shadow: 0 14px 30px rgba(214,183,121,0.14);
 }
 
 .video-card video {
@@ -996,12 +1131,16 @@ footer span {
     background: #171717;
     border: 1px solid rgba(214,183,121,0.2);
     border-radius: 10px;
-    transition: 0.3s ease;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
 .social-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-9px);
     border-color: #D6B779;
+    box-shadow: 0 14px 30px rgba(214,183,121,0.14);
 }
 
 .social-icon {
@@ -1058,12 +1197,30 @@ footer span {
     letter-spacing: 3px;
     font-size: 12px;
 }
-
 .project-philosophy h2 {
     color: #FFFFFF;
     font-size: clamp(28px, 4vw, 42px);
     max-width: 750px;
     margin: 20px auto;
+    position: relative;
+    display: table;
+    padding-bottom: 15px;
+}
+
+.project-philosophy h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #D6B779;
+    transform: translateX(-50%);
+    transition: width 1s ease;
+}
+
+.project-philosophy.reveal.visible h2::after {
+    width: 65%;
 }
 
 .project-philosophy p {
@@ -1081,11 +1238,29 @@ footer span {
     text-align: center;
     background: #0B0B0B;
 }
-
 .projects-cta h2 {
     color: #FFFFFF;
     font-size: 34px;
     margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.projects-cta h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #D6B779;
+    transform: translateX(-50%);
+    transition: width 1s ease;
+}
+
+.projects-cta.reveal.visible h2::after {
+    width: 75%;
 }
 
 .projects-cta p {
@@ -1213,5 +1388,1466 @@ footer span {
 
     .lightbox button {
         font-size: 27px;
+    }
+}
+
+/* =========================================
+   KENDIVORA COMPLETE THEME SYSTEM
+========================================= */
+
+/* 1. DARK MODE - DEFAULT */
+
+:root {
+    --bg-color: #0B0B0B;
+    --text-color: #FFFFFF;
+    --muted-text: #CCCCCC;
+    --card-color: #171717;
+    --accent-color: #D6B779;
+    --border-color: #333333;
+}
+
+/* 2. LIGHT MODE COLOURS */
+
+body.light-mode {
+    --bg-color: #FFFFFF;
+    --text-color: #111111;
+    --muted-text: #292929;
+    --card-color: #F3F3F3;
+    --accent-color: #A7833F;
+    --border-color: #DDDDDD;
+}
+
+/* 3. GENERAL SETTINGS */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #FFFFFF;
+    color: #111111;
+}
+
+/* 4. NAVIGATION BAR */
+
+body.light-mode header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+body.light-mode nav {
+    background-color: transparent;
+}
+
+body.light-mode .logo {
+    color: #A7833F;
+}
+
+body.light-mode .nav-links a {
+    color: #111111;
+}
+
+body.light-mode .nav-links a:hover {
+    color: #A7833F;
+}
+
+body.light-mode .menu-toggle {
+    color: #A7833F;
+}
+
+/* MOBILE NAVIGATION DROPDOWN */
+
+@media (max-width: 768px) {
+    body.light-mode .nav-links {
+        background-color: #FFFFFF;
+        border: 1px solid #A7833F;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    body.light-mode .nav-links a {
+        color: #111111;
+    }
+    .graphic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+/* 5. HOME PAGE */
+
+/* Main hero */
+
+body.light-mode .hero {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .hero h1 {
+    color: #111111;
+}
+
+body.light-mode .hero h1 span {
+    color: #A7833F;
+}
+
+body.light-mode .hero p {
+    color: #292929;
+}
+
+/* Services */
+
+body.light-mode .services {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .services h2 {
+    color: #111111;
+}
+
+body.light-mode .services h2 span {
+    color: #A7833F;
+}
+
+body.light-mode .services-intro {
+    color: #292929;
+}
+
+body.light-mode .service-card {
+    background-color: #F3F3F3;
+    border-color: #DDDDDD;
+}
+
+body.light-mode .service-card h3 {
+    color: #A7833F;
+}
+
+body.light-mode .service-card p {
+    color: #292929;
+}
+
+/* Home call to action - dark section */
+
+body.light-mode .cta {
+    background-color: #171717;
+}
+
+body.light-mode .cta h2 {
+    color: #FFFFFF;
+}
+
+body.light-mode .cta h2 span {
+    color: #D6B779;
+}
+
+body.light-mode .cta p {
+    color: #E0E0E0;
+}
+
+/* 6. ABOUT PAGE */
+
+/* About hero - dark section */
+
+body.light-mode .about-hero,
+body.light-mode .about-closing {
+    background: radial-gradient(
+        circle at center,
+        #252017 0%,
+        #0B0B0B 70%
+    );
+}
+
+body.light-mode .about-hero h1,
+body.light-mode .about-closing h2 {
+    color: #FFFFFF;
+}
+
+body.light-mode .about-hero h1 span,
+body.light-mode .about-closing h2 span {
+    color: #D6B779;
+}
+
+body.light-mode .hero-description,
+body.light-mode .about-closing p:not(.section-label) {
+    color: #E0E0E0;
+}
+
+/* Brand philosophy - light section */
+
+body.light-mode .brand-philosophy {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .brand-philosophy h2 {
+    color: #111111;
+}
+
+body.light-mode .brand-philosophy h2 span {
+    color: #A7833F;
+}
+
+body.light-mode .brand-philosophy p:not(.section-label) {
+    color: #292929;
+}
+
+/* Three pillars - dark section */
+
+body.light-mode .pillars {
+    background-color: #171717;
+}
+
+body.light-mode .pillars h2 {
+    color: #FFFFFF;
+}
+
+body.light-mode .pillars h2 span {
+    color: #D6B779;
+}
+
+body.light-mode .pillar-card {
+    background-color: #0B0B0B;
+    border-color: #444444;
+}
+
+body.light-mode .pillar-card h3 {
+    color: #D6B779;
+}
+
+body.light-mode .pillar-card p {
+    color: #E0E0E0;
+}
+
+/* Mission and vision - light section */
+
+body.light-mode .mission-vision {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .mission-box,
+body.light-mode .vision-box {
+    background-color: #F3F3F3;
+    border-left-color: #A7833F;
+}
+
+body.light-mode .mission-vision h2 {
+    color: #111111;
+}
+
+body.light-mode .mission-vision h2 span {
+    color: #A7833F;
+}
+
+body.light-mode .mission-vision p:not(.section-label) {
+    color: #292929;
+}
+
+/* Areas of interest - light section */
+
+body.light-mode .explore {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .explore h2 {
+    color: #111111;
+}
+
+body.light-mode .explore h2 span {
+    color: #A7833F;
+}
+
+body.light-mode .explore-intro {
+    color: #292929;
+}
+
+body.light-mode .explore-card {
+    background-color: #F3F3F3;
+    border-color: #DDDDDD;
+}
+
+body.light-mode .explore-card h3 {
+    color: #A7833F;
+}
+
+body.light-mode .explore-card p {
+    color: #292929;
+}
+
+/* 7. CONTACT PAGE */
+
+/* Contact hero - dark section */
+
+body.light-mode .contact-hero {
+    background: radial-gradient(
+        circle at center,
+        #252017 0%,
+        #0B0B0B 70%
+    );
+}
+
+body.light-mode .contact-hero h1 {
+    color: #FFFFFF;
+}
+
+body.light-mode .contact-hero h1 span {
+    color: #D6B779;
+}
+
+body.light-mode .contact-hero > p:last-child {
+    color: #E0E0E0;
+}
+
+/* Contact details - light section */
+
+body.light-mode .contact-section {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .contact-info h2,
+body.light-mode .contact-form-container h2 {
+    color: #111111;
+}
+
+body.light-mode .contact-intro {
+    color: #292929;
+}
+
+body.light-mode .contact-item h3 {
+    color: #A7833F;
+}
+
+body.light-mode .contact-item p,
+body.light-mode .contact-item a {
+    color: #292929;
+}
+
+body.light-mode .contact-icon {
+    color: #A7833F;
+    border-color: #A7833F;
+}
+
+/* Contact form - light card */
+
+body.light-mode .contact-form-container {
+    background-color: #F3F3F3;
+    border-color: #DDDDDD;
+}
+
+body.light-mode .form-group label {
+    color: #111111;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    background-color: #FFFFFF;
+    color: #111111;
+    border-color: #BBBBBB;
+}
+
+body.light-mode .form-group input::placeholder,
+body.light-mode .form-group textarea::placeholder {
+    color: #666666;
+}
+
+body.light-mode .form-note {
+    color: #444444;
+}
+
+/* Contact closing - dark section */
+
+body.light-mode .contact-closing {
+    background-color: #171717;
+}
+
+body.light-mode .contact-closing h2 {
+    color: #FFFFFF;
+}
+
+body.light-mode .contact-closing h2 span {
+    color: #D6B779;
+}
+
+body.light-mode .contact-closing > p:last-child {
+    color: #E0E0E0;
+}
+
+/* 8. PROJECTS PAGE */
+
+/* Projects hero - dark section */
+
+body.light-mode .projects-hero {
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.9)
+        ),
+        #171717;
+}
+
+body.light-mode .projects-hero h1 {
+    color: #FFFFFF;
+}
+
+body.light-mode .projects-hero h1 span {
+    color: #D6B779;
+}
+
+body.light-mode .projects-hero p {
+    color: #E0E0E0;
+}
+
+/* Graphic design - light section */
+
+body.light-mode .graphic-portfolio {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .section-heading h2 {
+    color: #111111;
+}
+
+body.light-mode .section-heading p {
+    color: #292929;
+}
+
+body.light-mode .section-heading span {
+    color: #A7833F;
+}
+
+body.light-mode .graphic-card {
+    background-color: #F3F3F3;
+    border-color: #DDDDDD;
+}
+
+body.light-mode .graphic-info h3 {
+    color: #111111;
+}
+
+body.light-mode .graphic-info p {
+    color: #292929;
+}
+
+body.light-mode .graphic-info span {
+    color: #A7833F;
+}
+
+/* Promotional video - dark section */
+
+body.light-mode .video-portfolio {
+    background-color: #171717;
+}
+
+body.light-mode .video-card {
+    background-color: #0B0B0B;
+    border-color: #444444;
+}
+
+body.light-mode .video-info h3 {
+    color: #D6B779;
+}
+
+body.light-mode .video-info p {
+    color: #E0E0E0;
+}
+
+/* Social media - light section */
+
+body.light-mode .social-management {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .social-card {
+    background-color: #F3F3F3;
+    border-color: #DDDDDD;
+}
+
+body.light-mode .social-card h3 {
+    color: #111111;
+}
+
+body.light-mode .social-card p {
+    color: #292929;
+}
+
+body.light-mode .social-card a {
+    color: #A7833F;
+}
+
+body.light-mode .social-icon {
+    color: #A7833F;
+    border-color: #A7833F;
+}
+
+/* Project philosophy - dark section */
+
+body.light-mode .project-philosophy {
+    background-color: #171717;
+}
+
+body.light-mode .project-philosophy h2 {
+    color: #FFFFFF;
+}
+
+body.light-mode .project-philosophy p {
+    color: #E0E0E0;
+}
+
+/* Projects CTA - light section */
+
+body.light-mode .projects-cta {
+    background-color: #FFFFFF;
+}
+
+body.light-mode .projects-cta h2 {
+    color: #111111;
+}
+
+body.light-mode .projects-cta p {
+    color: #292929;
+}
+
+/* 9. FOOTER */
+
+body.light-mode footer {
+    background-color: #FFFFFF;
+    color: #444444;
+    border-top-color: #DDDDDD;
+}
+
+body.light-mode footer span {
+    color: #A7833F;
+}
+
+/* 10. BUTTONS AND THEME CONTROL */
+
+body.light-mode .btn {
+    background-color: #A7833F;
+    color: #FFFFFF;
+}
+
+body.light-mode .btn:hover {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.theme-toggle {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 9px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+body.light-mode .theme-toggle {
+    color: #A7833F;
+    border-color: #A7833F;
+}
+
+/* 11. LIGHTBOX */
+
+body.light-mode .lightbox {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+body.light-mode .lightbox button {
+    color: #D6B779;
+}
+
+
+/* Promotional Videos - Dark background visibility */
+.video-portfolio .section-heading h2 {
+    color: #FFFFFF !important;
+}
+
+.video-portfolio .section-heading p {
+    color: #D6D6D6 !important;
+}
+
+#form-status {
+    margin-top: 15px;
+    color: #D6B779;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#contact-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* FLOATING BOOKING BUTTON */
+
+.floating-booking {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 23px;
+
+    background: linear-gradient(
+        135deg,
+        #E8D19E,
+        #D6B779,
+        #B99555
+    );
+
+    color: #0B0B0B;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+
+    border-radius: 50px;
+    border: 1px solid #E8D19E;
+
+    box-shadow:
+        0 8px 25px rgba(214, 183, 121, 0.25),
+        0 0 0 5px rgba(214, 183, 121, 0.06);
+
+    transition: all 0.35s ease;
+
+    animation: floatBooking 3s ease-in-out infinite;
+}
+
+/* SMALL GOLDEN DOT */
+
+.booking-dot {
+    width: 8px;
+    height: 8px;
+    background: #0B0B0B;
+    border-radius: 50%;
+    animation: bookingPulse 1.8s infinite;
+}
+
+/* ARROW */
+
+.booking-arrow {
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.floating-booking:hover {
+    background: #FFFFFF;
+    color: #0B0B0B;
+    border-color: #FFFFFF;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.floating-booking:hover .booking-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floatBooking {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* DOT PULSE */
+
+@keyframes bookingPulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(11, 11, 11, 0.35);
+    }
+
+    50% {
+        opacity: 0.55;
+        box-shadow: 0 0 0 5px rgba(11, 11, 11, 0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .floating-booking {
+        right: 16px;
+        bottom: 20px;
+        padding: 13px 18px;
+        font-size: 10px;
+        gap: 9px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-booking,
+    .booking-dot {
+        animation: none;
+    }
+}
+
+/* KENDIVORA BOOKING PAGE */
+
+.booking-page {
+    background: #0B0B0B;
+    padding: 100px 7%;
+    color: #FFFFFF;
+}
+
+/* HERO */
+
+.booking-hero {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.booking-label,
+.calendar-heading span {
+    color: #D6B779;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.booking-hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    margin: 25px 0;
+    color: #FFFFFF;
+}
+
+.booking-hero h1 span {
+    display: block;
+    color: #D6B779;
+    font-style: italic;
+}
+
+.booking-hero > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #BBBBBB;
+    line-height: 1.9;
+}
+
+/* MEETING OPTIONS */
+
+.meeting-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.meeting-option {
+    text-align: left;
+    padding: 28px;
+    background: #151515;
+    border: 1px solid rgba(214, 183, 121, 0.2);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.meeting-option:hover {
+    border-color: #D6B779;
+    transform: translateY(-5px);
+}
+
+.meeting-option span {
+    color: #D6B779;
+    font-size: 13px;
+}
+
+.meeting-option h3 {
+    color: #FFFFFF;
+    margin: 15px 0 8px;
+}
+
+.meeting-option p {
+    color: #AAAAAA;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CALENDAR SECTION */
+
+.calendar-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.calendar-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.calendar-heading h2 {
+    color: #FFFFFF;
+    font-size: clamp(27px, 4vw, 40px);
+    margin: 18px 0;
+}
+
+.calendar-heading p {
+    color: #BBBBBB;
+    line-height: 1.8;
+}
+
+.calendar-container {
+    background: #FFFFFF;
+    padding: 12px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(214, 183, 121, 0.12);
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .booking-page {
+        padding: 75px 5%;
+    }
+
+    .meeting-options {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-container {
+        padding: 4px;
+    }
+    @media (max-width: 480px) {
+    .graphic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.video-portfolio,
+.social-management {
+    padding: 65px 6%;
+}
+
+.social-grid {
+    grid-template-columns: 1fr;
+}
+
+.project-philosophy {
+    padding: 70px 7%;
+}
+
+.projects-cta {
+    padding: 65px 6%;
+}
+
+.projects-cta h2 {
+    font-size: 28px;
+}
+
+}
+
+/* =================================
+   KENDIVORA BOOKING PAGE THEMES
+================================= */
+
+/* DARK MODE — default */
+
+.booking-page {
+    background: #0B0B0B;
+    color: #FFFFFF;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.booking-hero h1,
+.calendar-heading h2 {
+    color: #FFFFFF;
+}
+
+.booking-hero > p,
+.calendar-heading p {
+    color: #BBBBBB;
+}
+
+.meeting-option {
+    background: #151515;
+    border: 1px solid rgba(214, 183, 121, 0.25);
+}
+
+.meeting-option h3 {
+    color: #FFFFFF;
+}
+
+.meeting-option p {
+    color: #BBBBBB;
+}
+
+.calendar-container {
+    background: #151515;
+    border: 1px solid rgba(214, 183, 121, 0.3);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(214, 183, 121, 0.10);
+}
+
+/* LIGHT MODE */
+
+body.light-mode .booking-page {
+    background: #F8F6F1;
+    color: #171717;
+}
+
+body.light-mode .booking-hero h1,
+body.light-mode .calendar-heading h2 {
+    color: #171717;
+}
+
+body.light-mode .booking-hero > p,
+body.light-mode .calendar-heading p {
+    color: #555555;
+}
+
+body.light-mode .meeting-option {
+    background: #FFFFFF;
+    border: 1px solid rgba(185, 149, 85, 0.35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+body.light-mode .meeting-option h3 {
+    color: #171717;
+}
+
+body.light-mode .meeting-option p {
+    color: #666666;
+}
+
+body.light-mode .calendar-container {
+    background: #FFFFFF;
+    border: 1px solid rgba(185, 149, 85, 0.35);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* KENDIVORA TYPOGRAPHY */
+
+h1, h2, h3, h4, h5, h6,
+p, a, button, input, textarea, label {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* =====================================
+   KENDIVORA — SCROLL REVEAL ANIMATIONS
+===================================== */
+
+html.js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+html.js-enabled .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* STAGGERED CARD ANIMATIONS */
+
+html.js-enabled .reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+html.js-enabled .reveal-stagger.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html.js-enabled .reveal-stagger.visible > *:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+html.js-enabled .reveal-stagger.visible > *:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+html.js-enabled .reveal-stagger.visible > *:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+/* KENDIVORA — GOLD LIGHT SWEEP */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.65),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.65s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
+/* KENDIVORA LOGO — DARK MODE */
+
+.hero-logo {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    animation: kendivoraDarkGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes kendivoraDarkGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(214, 183, 121, 0.12));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 22px rgba(214, 183, 121, 0.4));
+    }
+}
+
+/* KENDIVORA LOGO — LIGHT MODE */
+
+body.light-mode .hero-logo {
+    animation: kendivoraLightGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes kendivoraLightGlow {
+    0%, 100% {
+        filter: drop-shadow(0 2px 5px rgba(120, 85, 30, 0.15));
+    }
+
+    50% {
+        filter: drop-shadow(0 3px 18px rgba(145, 105, 35, 0.35));
+    }
+}
+
+/* KENDIVORA — ANIMATED GOLD UNDERLINE */
+
+.services h2,
+.closing h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.services h2::after,
+.closing h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 1s ease;
+}
+
+.services.reveal.visible h2::after,
+.closing.reveal.visible h2::after {
+    width: 100%;
+}
+
+/* KENDIVORA — WELCOME TEXT ANIMATION */
+
+.welcome {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    animation: welcomeFade 1.2s ease both;
+}
+
+.welcome::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: translateX(-50%);
+    animation: welcomeUnderline 1.2s ease 0.6s forwards;
+}
+
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes welcomeUnderline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* KENDIVORA — FLOWER CELEBRATION */
+
+.booking-celebration-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.booking-particle {
+    position: absolute;
+    left: var(--start-x);
+    top: var(--start-y);
+    font-size: var(--size);
+    opacity: 0;
+    animation: flowerBurst 1.5s ease-out forwards;
+    filter: drop-shadow(0 2px 3px rgba(214, 183, 121, 0.3));
+}
+
+@keyframes flowerBurst {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(
+            calc(-50% + var(--dx)),
+            calc(-50% + var(--dy))
+        ) scale(0.7) rotate(var(--spin));
+    }
+}
+
+/* KENDIVORA — ABOUT HERO ENTRANCE */
+
+.about-hero h1 {
+    animation: aboutTitleReveal 1s ease both;
+}
+
+.about-hero .hero-description {
+    animation: aboutDescriptionReveal 1s ease 0.4s both;
+}
+
+@keyframes aboutTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutDescriptionReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.about-logo {
+    animation: homeLogoSlideIn 1.2s ease 0.3s both;
+}
+
+/* KENDIVORA — PILLAR CARD ANIMATIONS */
+
+.pillar-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 28px rgba(214, 183, 121, 0.14);
+}
+
+/* KENDIVORA — MISSION & VISION ANIMATIONS */
+
+html.js-enabled .mission-vision.reveal-stagger > .mission-box,
+html.js-enabled .mission-vision.reveal-stagger > .vision-box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        box-shadow 0.7s ease,
+        border-color 0.7s ease;
+}
+
+html.js-enabled .mission-vision.reveal-stagger.visible > .mission-box {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+html.js-enabled .mission-vision.reveal-stagger.visible > .vision-box {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 28px rgba(214, 183, 121, 0.12);
+}
+
+/* KENDIVORA — ABOUT PAGE HEADING UNDERLINES */
+
+.brand-philosophy h2,
+.pillars h2,
+.explore h2,
+.about-closing h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.brand-philosophy h2::after,
+.pillars h2::after,
+.explore h2::after,
+.about-closing h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 1s ease;
+}
+
+.brand-philosophy.reveal.visible h2::after,
+.pillars.reveal.visible h2::after,
+.explore.reveal.visible h2::after,
+.about-closing.reveal.visible h2::after {
+    width: 100%;
+}
+
+/* KENDIVORA — ABOUT PAGE LOGO */
+
+/* DARK MODE */
+.about-logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.about-logo img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    animation: kendivoraDarkGlow 3.5s ease-in-out infinite;
+}
+
+/* LIGHT MODE */
+body.light-mode .about-logo img {
+    animation: kendivoraLightGlow 3.5s ease-in-out infinite;
+}
+
+/* KENDIVORA — PROJECTS PAGE LOGO */
+
+/* DARK MODE */
+.projects-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projects-logo img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    animation: kendivoraDarkGlow 3.5s ease-in-out infinite;
+}
+
+/* LIGHT MODE */
+body.light-mode .projects-logo img {
+    animation: kendivoraLightGlow 3.5s ease-in-out infinite;
+}
+
+/* KENDIVORA — PROJECTS HERO ANIMATIONS */
+
+.projects-logo {
+    animation: projectsLogoReveal 1s ease both;
+}
+
+.projects-hero-content > span {
+    display: inline-block;
+    animation: projectsTextReveal 1s ease 0.3s both;
+}
+
+.projects-hero h1 {
+    animation: projectsTextReveal 1s ease 0.5s both;
+}
+
+.projects-hero p {
+    animation: projectsTextReveal 1s ease 0.7s both;
+}
+
+.projects-hero .btn {
+    animation: projectsTextReveal 1s ease 0.9s both;
+}
+@keyframes projectsLogoReveal {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes projectsTextReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+html.js-enabled .contact-section.reveal-stagger.visible > .contact-form-container:hover {
+    transform: translateY(-5px);
+    border-color: #B58A3A;
+    box-shadow: 0 12px 30px rgba(145, 105, 35, 0.22);
+}
+
+/* BOOK PAGE TEXT SLIDE-IN ANIMATIONS */
+
+.booking-hero .booking-label {
+    animation: bookSlideIn 0.8s ease both;
+}
+
+.booking-hero h1 {
+    animation: bookSlideIn 1s ease 0.2s both;
+}
+
+.booking-hero > p {
+    animation: bookSlideIn 1s ease 0.4s both;
+}
+
+.meeting-options {
+    animation: bookSlideIn 1s ease 0.6s both;
+}
+
+.calendar-heading > span {
+    animation: bookSlideIn 0.8s ease both;
+}
+
+.calendar-heading h2 {
+    animation: bookSlideIn 1s ease 0.2s both;
+}
+
+.calendar-heading p {
+    animation: bookSlideIn 1s ease 0.4s both;
+}
+
+@keyframes bookSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HOME HERO TEXT SLIDE-IN */
+
+.hero-content .welcome {
+    animation: homeSlideIn 0.9s ease both;
+}
+
+.hero-content h1 {
+    animation: homeSlideIn 1s ease 0.2s both;
+}
+
+.hero-content h2 {
+    animation: homeSlideIn 1s ease 0.4s both;
+}
+
+.hero-content .intro {
+    animation: homeSlideIn 1s ease 0.6s both;
+}
+
+.hero-content .hero-buttons {
+    animation: homeSlideIn 1s ease 0.8s both;
+}
+
+@keyframes homeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HOME PAGE LOGO SLIDE-IN */
+
+.hero-image {
+    animation: homeLogoSlideIn 1.2s ease 0.5s both;
+}
+
+@keyframes homeLogoSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

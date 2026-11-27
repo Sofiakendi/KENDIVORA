@@ -15,26 +15,38 @@
  
 
     <header>
-        <nav>
-            <a href="index.html" class="logo">KENDIVORA</a>
+        <nav class="navbar">
 
-            <button class="menu-toggle" id="menu-toggle">
-                ☰
-            </button>
+    <a href="index.html" class="logo">
+        KENDIVORA<span>.</span>
+    </a>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <button id="theme-toggle" class="theme-toggle">
+        ☀️ Light Mode
+    </button>
+
+    <button class="menu-toggle" id="menu-toggle">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book</a></li>
+    </ul>
+
+</nav>
     </header>
 
 
   
 
-    <section class="about-hero">
+    <section class="about-hero reveal">
+        <div class="about-logo">
+    <img src="Kendivora-Logo.png" alt="KENDIVORA Technologies Logo">
+</div>
 
         <p class="section-label">ABOUT KENDIVORA</p>
 
@@ -55,7 +67,7 @@
 
   
 
-    <section class="brand-philosophy">
+    <section class="brand-philosophy reveal">
 
         <p class="section-label">OUR PHILOSOPHY</p>
 
@@ -82,13 +94,13 @@
 
 
 
-    <section class="pillars">
+    <section class="pillars reveal">
 
         <p class="section-label">WHAT DEFINES US</p>
 
         <h2>Three Pillars. <span>One Philosophy.</span></h2>
 
-        <div class="pillar-container">
+        <div class="pillar-container reveal-stagger">
 
             <div class="pillar-card">
 
@@ -141,7 +153,7 @@
 
 
 
-    <section class="mission-vision">
+    <section class="mission-vision reveal-stagger">
 
         <div class="mission-box">
 
@@ -179,7 +191,7 @@
 
  
 
-    <section class="explore">
+    <section class="explore reveal">
 
         <p class="section-label">OUR AREAS OF INTEREST</p>
 
@@ -190,7 +202,7 @@
             technology and digital communication.
         </p>
 
-        <div class="explore-container">
+        <div class="explore-container reveal-stagger">
 
             <div class="explore-card">
                 <h3>Web Design</h3>
@@ -224,7 +236,7 @@
 
    
 
-    <section class="about-closing">
+    <section class="about-closing reveal">
 
         <p class="section-label">THE KENDIVORA MINDSET</p>
 
@@ -239,8 +251,13 @@
         </p>
 
         <a href="contact.html" class="btn">Let's Connect</a>
-
-    </section>
+     
+     </section>
+      <a href="book.html" class="floating-booking">
+    <span class="booking-dot"></span>
+    <span>BOOK A CALL</span>
+    <span class="booking-arrow">↗</span>
+</a>
 
 
     

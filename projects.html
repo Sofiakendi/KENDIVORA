@@ -11,24 +11,32 @@
 
     <!-- NAVIGATION -->
     <header>
-        <nav>
-            <a href="index.html" class="logo">KENDIVORA</a>
+        <nav class="navbar">
+    <a href="index.html" class="logo">KENDIVORA<span>.</span></a>
 
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+    <button id="theme-toggle" class="theme-toggle">
+        ☀️ Light Mode
+    </button>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="book.html">Book</a></li>
+    </ul>
+</nav>
     </header>
 
 
     <!-- PROJECTS HERO -->
     <section class="projects-hero">
         <div class="projects-hero-content">
+            <div class="about-logo">
+    <img src="Kendivora-Logo.png" alt="KENDIVORA Technologies Logo">
+</div>
             <span>MY WORK & CREATIVE JOURNEY</span>
 
             <h1>Ideas Into <span>Impact.</span></h1>
@@ -41,12 +49,18 @@
             <a href="#graphic-design" class="btn">
                 Explore My Work
             </a>
+
+          <a href="book.html" class="floating-booking">
+    <span class="booking-dot"></span>
+    <span>BOOK A CALL</span>
+    <span class="booking-arrow">↗</span>
+</a>
         </div>
     </section>
 
 
     <!-- GRAPHIC DESIGN PORTFOLIO -->
-    <section class="graphic-portfolio" id="graphic-design">
+    <section class="graphic-portfolio reveal" id="graphic-design">
 
         <div class="section-heading">
             <span>CREATIVITY IN DESIGN</span>
@@ -58,7 +72,7 @@
             </p>
         </div>
 
-        <div class="graphic-grid">
+        <div class="graphic-grid reveal-stagger">
 
             <div class="graphic-card">
                 <div class="graphic-image">
@@ -142,7 +156,7 @@
 
 
     <!-- PROMOTIONAL VIDEO -->
-    <section class="video-portfolio">
+    <section class="video-portfolio reveal">
 
         <div class="section-heading">
             <span>VISUAL STORYTELLING</span>
@@ -154,7 +168,7 @@
             </p>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
 
             <!-- Replace with your own video file -->
             <video controls>
@@ -176,7 +190,7 @@
 
 
     <!-- SOCIAL MEDIA MANAGEMENT -->
-    <section class="social-management" id="social-management">
+    <section class="social-management reveal" id="social-management">
 
         <div class="section-heading">
             <span>DIGITAL PRESENCE</span>
@@ -188,7 +202,7 @@
             </p>
         </div>
 
-        <div class="social-grid">
+        <div class="social-grid reveal-stagger">
 
             <div class="social-card">
                 <div class="social-icon">IG</div>
@@ -239,7 +253,7 @@
 
 
     <!-- PROJECT PHILOSOPHY -->
-    <section class="project-philosophy">
+    <section class="project-philosophy reveal">
 
         <span>THE KENDIVORA APPROACH</span>
 
@@ -256,7 +270,7 @@
 
 
     <!-- CONTACT CTA -->
-    <section class="projects-cta">
+    <section class="projects-cta reveal">
 
         <h2>Have an Idea in Mind?</h2>
 
